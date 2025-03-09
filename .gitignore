@@ -1,0 +1,4 @@
+openapi/
+.venv
+__pycache__
+latest.yml.sha256

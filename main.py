@@ -68,7 +68,7 @@ def checkUpdate():
     res = requests.get("https://launcherupdates.lunarclientcdn.com/latest.yml")
     if(res.ok):
         hash = getHash(res.content)
-        with open("latest.yml.sha256", "r") as f:
+        with open("latest.yml.sha256", "w+") as f:
             prevHash = f.readline()
             logger.info("prevHash="+ prevHash)
             logger.info("nowHash="+ hash)
@@ -80,7 +80,7 @@ def checkUpdate():
                 updateHash(hash)
                 extractPackage(res.content) 
 
-# checkUpdate()
+checkUpdate()
 logger.add(sys.stdout, colorize=True, format="<green>{time}</green> <level>{message}</level>")
 scheduler = BlockingScheduler()
 scheduler.add_job(checkUpdate, 'interval', hours=6)
