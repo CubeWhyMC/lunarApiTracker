@@ -4,3 +4,5 @@ services:
     restart: always
     build: .
     command: pdm run ./main.py
+    volumes:
+      - .:/tracker
