@@ -1,0 +1,15 @@
+[project]
+name = "lunarapiTracker"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "zszf114514", email = "2792668017@foxmail.com"},
+]
+dependencies = ["requests>=2.32.3", "apscheduler>=3.11.0", "pyyaml>=6.0.2", "loguru>=0.7.3", "DownloadKit>=2.0.7", "pyasar>=1.0.8"]
+requires-python = "==3.13.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false

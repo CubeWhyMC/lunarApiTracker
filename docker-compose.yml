@@ -1,0 +1,6 @@
+services:
+  tracker:
+    container_name: lunar-tracker
+    restart: always
+    build: .
+    command: pdm run ./main.py
